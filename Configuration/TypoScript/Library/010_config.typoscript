@@ -1,0 +1,100 @@
+# general settings ---------------------------------------------------------------------------------------------------------------
+config {
+
+  # page title ----------------------------------
+  pageTitleFirst = 1
+  # noPageTitle = 1
+
+  htmlTag_setParams = class="no-js" lang="de"
+
+  headerComment (
+    provider extension by www.websites-graphix.com
+  )
+
+  no_cache = 1
+  sendCacheHeaders = 1
+  enableContentLengthHeader = 0
+
+  extTarget = _blank
+
+  disableImgBorderAttr = 1
+
+  # realUrl --------------------------------------
+  # absRefPrefix = /
+  # tx_realurl_enable = 1
+  # prefixLocalAnchors = all
+
+  # spam protection ------------------------------
+  spamProtectEmailAddresses = 2
+  spamProtectEmailAddresses_atSubst = &#64;
+  spamProtectEmailAddresses_lastDotSubst = .
+
+  # performance ----------------------------------
+  removeDefaultCss = 1
+  removeDefaultJS = external
+  inlineStyle2TempFile = 1
+  moveJsFromHeaderToFooter = 1
+  disablePrefixComment = 1
+  concatenateCss = 1
+  compressCss = 1
+  concatenateJs = 1
+  compressJs = 1
+
+  # various --------------------------------------
+  meaningfulTempFilePrefix = 50
+
+}
+
+# disable cache when logged in be ---------------
+[globalVar = TSFE:beUserLogin > 0]
+  config.no_cache = 1
+[global]
+
+# disable when set to "development" (.htaccess: "SetEnv TYPO3_CONTEXT Development") ---------
+[applicationContext = Development*]
+  config {
+    inlineStyle2TempFile = 0
+    compressCss = 0
+    concatenateCss = 0
+    compressJs = 0
+    concatenateJs = 0
+  }
+  page.meta.robots = noindex,nofollow
+[end]
+
+
+
+# languge settings ---------------------------------------------------------------------------------------------------------------
+config {
+
+  sys_language_mode = content_fallback
+  sys_language_overlay = 0
+  linkVars = L
+
+  # default website language ----------------------
+  sys_language_uid = 0
+  language = de
+  locale_all = de_DE.UTF-8
+  htmlTag_setParams = lang="de"
+
+}
+
+# english -----------------------------------------
+# [globalVar = GP:L=1]
+#  config {
+#    sys_language_uid = 1
+#    language = en
+#    locale_all = en_US.UTF-8
+#    htmlTag_setParams = lang="en"
+#  }
+# [global]
+
+# french ------------------------------------------
+# [globalVar = GP:L=2]
+#  config {
+#    sys_language_uid = 2
+#    language = fr
+#    locale_all = fr_FR.UTF-8
+#    htmlTag_setParams = lang="fr"
+#  }
+# [global]

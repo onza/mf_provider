@@ -1,0 +1,104 @@
+# BE Layouts -------------------------------------------------------------------------------------------------
+mod.web_layout.BackendLayouts {
+  homepage {
+    title = Startseite
+    #icon = EXT:provider/Resources/Public/Icons/Be/
+    config {
+      backend_layout {
+      	colCount = 12
+      	rowCount = 3
+      	rows {
+          1 {
+      			columns {
+      				1 {
+      					name = Headerbild
+      					colPos = 1
+                colspan = 12
+      				}
+      			}
+      		}
+      		2 {
+      			columns {
+      				1 {
+      					name = Inhalte
+      					colPos = 2
+                colspan = 12
+      				}
+      			}
+      		}
+      	}
+      }
+    }
+  }
+  firstlevelpage {
+    title = Seite der 1. Ebene
+    #icon = EXT:provider/Resources/Public/Icons/Be/
+    config {
+      backend_layout {
+      	colCount = 12
+      	rowCount = 2
+      	rows {
+					1 {
+      			columns {
+      				1 {
+      					name = Headerbild
+      					colPos = 1
+                colspan = 12
+      				}
+      			}
+      		}
+          2 {
+      			columns {
+      				1 {
+      					name = Inhalte
+      					colPos = 2
+                colspan = 8
+      				}
+							2 {
+      					name = Sidebar
+      					colPos = 3
+                colspan = 4
+      				}
+      			}
+      		}
+      	}
+      }
+    }
+  }
+	subpage {
+    title = Unterseiten
+    #icon = EXT:provider/Resources/Public/Icons/Be/
+    config {
+      backend_layout {
+      	colCount = 12
+      	rowCount = 1
+      	rows {
+          1 {
+      			columns {
+      				1 {
+      					name = Inhalt
+      					colPos = 2
+                colspan = 8
+      				}
+							2 {
+      					name = Sidebar
+      					colPos = 3
+                colspan = 4
+      				}
+      			}
+      		}
+      	}
+      }
+    }
+  }
+	leer {
+    title = leer
+    #icon = EXT:provider/Resources/Public/Icons/Be/
+    config {
+      backend_layout {
+      	colCount = 0
+      	rowCount = 0
+      }
+    }
+  }
+}

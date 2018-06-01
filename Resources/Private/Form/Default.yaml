@@ -1,0 +1,73 @@
+
+renderingOptions:
+  submitButtonLabel: senden
+type: Form
+identifier: default
+label: Example
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: 'Website Form'
+      recipientAddress: kontakt@empfaenger.de
+      recipientName: 'Max Mustermann'
+      senderAddress: '{text-2}'
+      senderName: '{text-1}'
+      replyToAddress: ''
+      carbonCopyAddress: ''
+      blindCarbonCopyAddress: ''
+      format: plaintext
+      attachUploads: false
+      translation:
+        language: ''
+    identifier: EmailToReceiver
+  -
+    options:
+      message: 'Vielen Dank für Ihre Nachricht.'
+    identifier: Confirmation
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: ''
+      nextButtonLabel: ''
+    type: Page
+    identifier: page-1
+    label: formular
+    renderables:
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-1
+        label: Name
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: Alphanumeric
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-2
+        label: E-Mail
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+          -
+            identifier: EmailAddress
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: textarea-1
+        label: Nachricht
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty

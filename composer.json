@@ -1,0 +1,19 @@
+{
+  "name": "Websitesgraphix/provider",
+  "description": "TYPO3 Provider Extension",
+  "type": "typo3-cms-extension",
+  "require": {
+    "typo3/cms": "^8.7.15"
+  },
+  "authors": [
+    {
+      "name": "Martin Farkas",
+      "email": "info@martinfarkas.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Websitesgraphix\\provider\\": "Classes"
+    }
+  }
+}

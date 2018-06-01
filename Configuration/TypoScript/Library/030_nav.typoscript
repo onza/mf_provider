@@ -1,0 +1,89 @@
+# main navi ------------------------------------------------------------------------------------------------------------------------
+lib.mainNavi = HMENU
+lib.mainNavi {
+  special = list
+  special.value = 9,2,3,4,5
+  1 = TMENU
+  1 {
+    wrap = |
+    expAll = 1
+    NO = 1
+    NO {
+      wrapItemAndSub  = <li>|</li>
+      stdWrap.htmlSpecialChars = 1
+    }
+    ACT < .NO
+    ACT = 1
+    ACT.wrapItemAndSub  = <li class="act">|</li>
+    #ACT.doNotLinkIt = 1
+    CUR < .NO
+    CUR.wrapItemAndSub  = <li class="act">|</li>
+  }
+  2 = TMENU
+  2 {
+    wrap = <ul>|</ul>
+    expAll = 1
+    NO = 1
+    NO.wrapItemAndSub  = <li>|</li>
+    CUR < .NO
+    CUR.wrapItemAndSub  = <li class="act">|</li>
+    ACT < .NO
+    ACT = 1
+    ACT.wrapItemAndSub  = <li class="act">|</li>
+  }
+}
+
+# footer navi ------------------------------------------------------------------------------------------------------------------------
+lib.footerNavi = HMENU
+lib.footerNavi {
+  special = list
+  special.value = 12,13
+  1 = TMENU
+  1 {
+    wrap = <ul>|</ul>
+    noBlur = 1
+    NO = 1
+    NO {
+      wrapItemAndSub = <li>|</li>
+      stdWrap.htmlSpecialChars = 1
+      ATagTitle.field = title
+    }
+    ACT <.NO
+    ACT{
+      wrapItemAndSub = <li>|</li>
+    }
+  }
+}
+
+# breadcrumb navi ------------------------------------------------------------------------------------------------------------------------
+lib.breadcrumb = COA
+lib.breadcrumb {
+  10 = HMENU
+  10 {
+    special = rootline
+    special.range = 1|-1
+    # "not in menu pages" should show up in the breadcrumbs menu
+    # includeNotInMenu = 1
+    #excludeUidList = 2,3
+    1 = TMENU
+    1.noBlur = 1
+    # current item should be unlinked
+    1.CUR = 1
+    1.target = _self
+    1.wrap = |
+    1.NO {
+      stdWrap.field = title
+      ATagTitle.field = nav_title // title
+      doNotLinkIt = 1
+      doNotLinkIt.if.isInList.field = uid
+      #doNotLinkIt.if.value = 6,482,535,536
+      linkWrap = <span class="breadcrumb__item">|</span>
+    }
+    # current menu item is unlinked
+    1.CUR {
+      stdWrap.field = title
+      linkWrap = |
+      doNotLinkIt = 1
+    }
+  }
+}

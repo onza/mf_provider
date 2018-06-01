@@ -1,0 +1,43 @@
+# extension stuff ------------------------------------------------------------------------------------------------------------------------
+
+# outsource ext:news template (you must also copy ext:news templates into ext:provider news folder) -------------------------------------------------------
+# plugin.tx_news {
+#   view {
+#     templateRootPaths >
+#     templateRootPaths {
+#       0 = EXT:news/Resources/Private/Templates/
+#       1 = EXT:provider/Resources/Private/News/Templates/
+#     }
+#     partialRootPaths >
+#     partialRootPaths {
+#       0 = EXT:news/Resources/Private/Partials/
+#       1 = EXT:provider/Resources/Private/News/Partials/
+#     }
+#     layoutRootPaths >
+#     layoutRootPaths {
+#       0 = EXT:news/Resources/Private/Layouts/
+#       1 = EXT:provider/Resources/Private/News/Layouts/
+#     }
+#   }
+#   settings.cssFile = EXT:provider/Resources/News/Css
+# }
+
+# ext:min (more or less just for google insights, does not make performance better) ----------------------------------------------------
+# plugin.tx_min.tinysource {
+#   enable = 1
+#   head {
+#     stripTabs = 1
+#     stripNewLines = 1
+#     stripDoubleSpaces = 1
+#     stripTwoLinesToOne = 1
+#   }
+#   body {
+#     stripComments = 1
+#     stripTabs = 1
+#     stripNewLines = 1
+#     stripDoubleSpaces = 1
+#     stripTwoLinesToOne = 1
+#     preventStripOfSearchComment = 1
+#   }
+#   oneLineMode = 1
+# }

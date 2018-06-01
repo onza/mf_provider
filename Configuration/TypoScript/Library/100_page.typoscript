@@ -1,0 +1,141 @@
+# website head & stuff ------------------------------------------------------------------------------------------------------------
+page = PAGE
+page {
+
+  # META ---------------------------------------------------------------------------------------------------------------
+  meta {
+    X-UA-Compatible = IE=edge
+    X-UA-Compatible.httpEquivalent = 1
+
+    viewport = width=device-width, initial-scale=1
+
+    description.field = description
+    description.ifEmpty (
+      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    )
+    robots = index,follow
+  }
+
+  # favicon
+  shortcutIcon = EXT:provider/Resources/Public/Icons/favicon.svg
+
+  # cannonical tag
+  # headerData.10 = TEXT
+  # headerData.10.value = <link rel="canonical" href="http://www.XXXXXXXXXX.de|"  />
+
+  # CSS ----------------------------------------------------------------------------------------------------------------
+  includeCSS {
+    file10 = EXT:provider/Resources/Public/Css/reset.css
+    file20 = EXT:provider/Resources/Public/Css/demo.css
+    #file20.disableCompression = 1
+    #file20.excludeFromConcatenation = 1
+  }
+
+  # JAVASCRIPT ---------------------------------------------------------------------------------------------------------
+  # JS: Head/file
+  # includeJS {
+  #   file10 = EXT:provider/Resources/Public/Js/modernizr-custom.js
+  # }
+
+  # jQuery inkl. fallback --------------------------------
+  1000 = TEXT
+  1000.value (
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"><script>window.jQuery || document.write('<script src="Js/jquery-3.3.1.min.js"><\/script>')</script>
+  )
+
+  # Webfontloader (+ inline-JS) ---------------------------
+  # 1100 = TEXT
+  # 1100.value (
+  #   <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+  # )
+
+  # JS: footer/file -------------------------------------
+  includeJSFooter {
+    # mobile navi
+    file10 = EXT:provider/Resources/Public/Js/offcanvasnavi.js
+  }
+
+  # JS: footer/inline ------------------------------------
+  # XYZ
+  # jsFooterInline.10 = TEXT
+  # jsFooterInline.10.value (
+  #   XXXXXXXXXXXXXX
+  # )
+
+  # Google Analytics (anonymize_ip & opt-out) ------------------------------------
+  # footerData.990 = TEXT
+  # footerData.990.value (
+  #   <script>
+  #     var gaProperty = 'UA-XXXXXXXXX-XX';
+  #     var disableStr = 'ga-disable-' + gaProperty;
+  #     if (document.cookie.indexOf(disableStr + '=true') > -1) {
+  #       window[disableStr] = true;
+  #     }
+  #     function gaOptout() {
+  #       document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+  #       window[disableStr] = true;
+  #     }
+  #   </script>
+  #   <!-- Global site tag (gtag.js) - Google Analytics -->
+  #   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-XX"></script>
+  #   <script>
+  #     window.dataLayer = window.dataLayer || [];
+  #     function gtag(){dataLayer.push(arguments);}
+  #     gtag('js', new Date());
+  # 
+  #     gtag('config', 'UA-XXXXXXXXX-XX', { 'anonymize_ip': true });
+  #   </script>
+  # )
+
+
+
+  # page template ---------------------------------------------------------------------------------------------------------------
+  typeNum = 0
+
+  bodyTag >
+  bodyTagCObject = TEXT
+  bodyTagCObject.dataWrap = <body id="uid{field:uid}">
+  # if static: bodyTag = <body id="top">
+  
+  10 = FLUIDTEMPLATE
+  10 {
+    layoutRootPath = EXT:provider/Resources/Private/Pages/Layouts/
+    partialRootPath = EXT:provider/Resources/Private/Pages/Partials/
+    
+    file = EXT:provider/Resources/Private/Pages/Templates/Default.html
+
+    # template variables -------------------
+    variables {
+      content0 = CONTENT
+      content0 {
+        table = tt_content
+        select.where = colPos=0
+        select.orderBy = sorting
+      }
+      header < .content0
+      header.select.where = colPos = 1
+      main < .content0
+      main.select.where = colPos = 2
+      aside < .content0
+      aside.select.where = colPos = 3
+
+      # connect fe-layouts and be-layouts -------------------
+      backendlayout = TEXT
+      backendlayout.data = pagelayout
+      backendlayout = CASE
+      backendlayout {
+        key.data = pagelayout
+
+        # templates
+        pagets__homepage = TEXT
+        pagets__homepage.value = homepage
+        pagets__firstlevelpage = TEXT
+        pagets__firstlevelpage.value = firstlevelpage
+        pagets__subpage = TEXT
+        pagets__subpage.value = subpage
+        # default < .pagets__subpage
+      }
+    }
+  }
+
+}

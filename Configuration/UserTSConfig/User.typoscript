@@ -1,0 +1,8 @@
+# options {
+#  pageTree.showPageIdWithTitle = 1
+# }
+
+mod.web_layout.localization {
+  enableCopy = 0
+  enableTranslate = 1
+}

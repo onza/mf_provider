@@ -1,0 +1,20 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowSaveToExtensionPaths: true
+        allowDeleteFromExtensionPaths: false
+        allowedExtensionPaths:
+          10: EXT:provider/Resources/Private/Form/
+
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  200: 'EXT:provider/Resources/Private/Form/Templates/'
+                partialRootPaths:
+                  200: 'EXT:provider/Resources/Private/Form/Partials/'
+                layoutRootPaths:
+                  200: 'EXT:provider/Resources/Private/Form/Layouts/'
