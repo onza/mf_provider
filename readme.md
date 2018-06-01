@@ -1,28 +1,30 @@
-# Provider extension for TYPO3 CMS
+# Provider Extension for TYPO3 CMS
 
 For a quick and clean start to a new TYPO3 project.
 
 #### Many settings are already integrated and may only need to be activated and adjusted:
-* example Template width backend layouts
+* example website templates width backend layouts
 * different menus (only TS by now)
 * meta information
 * CSS and JS integration
 * spam protection
 * website performance via applicationContext
 * language settings
-* disable default content elements via Extension Manager
-* Gridelements incl. example
+* disable default content elements via extension manager
+* `ext:gridelements` example
 * Google Analytics (anonymize_ip & opt-out)
-* Realurl
+* enable `ext:realurl`
 * prepared for the integration of own `ext:form` and `ext:news` templates
+* ...
 
 ## How to use:
 
-Just copy the `provider` folder inside typo3conf/ext/ of your typo3 installation and start the integration of your templates.
+Just copy the `provider` folder inside `typo3conf/ext/` of your typo3 installation and start the integration of your templates.
 If you use ext:news with own templates and/or the form core extension you copy these extension templates into Resources/Private/News and/or .../Form.
 
 System environment:
 * typo3 8.7.15 - 8.99
+
 
 
 
