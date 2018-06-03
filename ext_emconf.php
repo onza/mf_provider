@@ -10,7 +10,6 @@ $EM_CONF[$_EXTKEY] = [
   'author' => 'Martin Farkas',
   'author_email' => 'info@martinfarkas.com',
   'author_company' => 'Websites & Graphix',
-  'generator' => 'provider',
   'constraints' => [
     'depends' => [
       'typo3' => '8.7.*',
