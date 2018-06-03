@@ -1,6 +1,6 @@
 # Provider Extension for TYPO3 CMS
 
-For a quick and clean start to a new TYPO3 project.
+A plain TYPO3 template provider extension for a quick and clean start to a new TYPO3 project.
 
 #### Many settings are already integrated and may only need to be activated and adjusted:
 * example website templates width backend layouts
@@ -17,14 +17,13 @@ For a quick and clean start to a new TYPO3 project.
 * prepared for the integration of own `ext:form` and `ext:news` templates
 * ...
 
-## How to use:
+## How to use
 
 Just copy the `provider` folder inside `typo3conf/ext/` of your typo3 installation and start the integration of your templates.
 If you use ext:news with own templates and/or the form core extension you copy these extension templates into Resources/Private/News and/or .../Form.
 
 System environment:
-* typo3 8.7.15 - 8.99
-
+* typo3 8.7.*
 
 
 
