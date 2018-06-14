@@ -11,9 +11,6 @@ lib.year {
 # lib.contentElement.layoutRootPaths.10 = typo3conf/ext/provider/Resources/Private/Fsc/Layouts/
 # lib.contentElement.partialRootPaths.10 = typo3conf/ext/provider/Resources/Private/Fsc/Partials/
 # lib.contentElement.templateRootPaths.10 = typo3conf/ext/provider/Resources/Private/Fsc/Templates/
-# lib.fluidContent.layoutRootPaths.10 = typo3conf/ext/provider/Resources/Private/Fsc/Layouts/
-# lib.fluidContent.partialRootPaths.10 = typo3conf/ext/provider/Resources/Private/Fsc/Partials/
-# lib.fluidContent.templateRootPaths.10 = typo3conf/ext/provider/Resources/Private/Fsc/Templates/
 
 # own icon set for fsc-ce "file-upload"
 # tt_content.uploads.20.renderObj.15.file {
