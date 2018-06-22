@@ -13,7 +13,6 @@ config {
     provider extension by www.websites-graphix.com
   )
 
-  no_cache = 1
   sendCacheHeaders = 1
   enableContentLengthHeader = 0
 
@@ -32,6 +31,7 @@ config {
   spamProtectEmailAddresses_lastDotSubst = .
 
   # performance ----------------------------------
+  no_cache = 1
   removeDefaultCss = 1
   removeDefaultJS = external
   inlineStyle2TempFile = 1
@@ -68,7 +68,6 @@ config {
 
 # languge settings ---------------------------------------------------------------------------------------------------------------
 config {
-
   sys_language_mode = content_fallback
   sys_language_overlay = 0
   linkVars = L
