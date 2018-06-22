@@ -2,6 +2,12 @@
 page = PAGE
 page {
 
+  # body Tag
+  bodyTag >
+  bodyTagCObject = TEXT
+  bodyTagCObject.field = uid
+  bodyTagCObject.wrap = <body id="uid|">
+
   # META ---------------------------------------------------------------------------------------------------------------
   meta {
     X-UA-Compatible = IE=edge
@@ -19,9 +25,9 @@ page {
   # favicon
   # shortcutIcon = EXT:mf_provider/Resources/Public/Icons/favicon.png
   headerData.10 = TEXT
-  headerData.10.value = <link rel="icon" type="image/png" sizes="32x32" href="/typo3conf/ext/mf_provider/Resources/Public/Icons/favicon-32x32.png" />
+  headerData.10.value = <link rel="icon" type="image/png" sizes="32x32" href="/typo3conf/ext/provider/Resources/Public/Icons/favicon-32x32.png" />
   headerData.20 = TEXT
-  headerData.20.value = <link rel="icon" type="image/png" sizes="16x16" href="/typo3conf/ext/mf_provider/Resources/Public/Icons/favicon-16x16.png" />
+  headerData.20.value = <link rel="icon" type="image/png" sizes="16x16" href="/typo3conf/ext/provider/Resources/Public/Icons/favicon-16x16.png" />
 
   # cannonical tag
   # headerData.30 = TEXT
