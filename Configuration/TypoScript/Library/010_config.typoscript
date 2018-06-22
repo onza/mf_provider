@@ -1,8 +1,10 @@
 # general settings ---------------------------------------------------------------------------------------------------------------
 config {
 
-  # page title ----------------------------------
+  # page title (t3 be: page/template: "Sitetitle"; e.g.: "Page - Company Name" ) ----------------------------------
   pageTitleFirst = 1
+  pageTitleSeparator = -
+	pageTitleSeparator.noTrimWrap = | | |
   # noPageTitle = 1
 
   htmlTag_setParams = class="no-js" lang="de"
