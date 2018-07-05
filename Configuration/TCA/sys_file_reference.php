@@ -1,6 +1,6 @@
 <?php
 
-// crop images: -------------------------------------------------------------------------------------------------------------
+// 1) general: crop images: -------------------------------------------------------------------------------------------------------------
 $GLOBALS['TCA']['sys_file_reference']['columns']['crop']['config']['cropVariants'] = [
   'default' => [
     'title' => 'Desktop',
@@ -70,49 +70,43 @@ $GLOBALS['TCA']['sys_file_reference']['columns']['crop']['config']['cropVariants
   ],
 ];
 
-
-// example how to override crop for a single cType
-
-// $GLOBALS['TCA']['tt_content']['types']['myCtype']['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config'] = [
-//   'cropVariants' => [
-//     'default' => [
-//       'disabled' => true,
-//     ],
-//     'tablet' => [
-//       'disabled' => true,
-//     ],
-//     'mobile' => [
-//       'disabled' => true,
-//     ],
-//     'detailview' => [
-//       'title' => 'Detail View Image',
-//       'allowedAspectRatios' => [
-//         '3:2' => [
-//           'title' => 'News Detail View 3:2',
-//           'value' => 3 / 2
-//         ]
-//       ],
-//       'selectedRatio' => '3:2',
-//     ],
-//     'slider' => [
-//       'title' => 'Big Slider Image',
-//       'allowedAspectRatios' => [
-//         '1920:715' => [
-//           'title' => 'Slider Image 1920:715',
-//           'value' => 1920 / 715
-//         ]
-//       ],
-//       'selectedRatio' => '1920:715',
-//     ],
-//     'boxslider' => [
-//       'title' => 'Box Slider Image',
-//       'allowedAspectRatios' => [
-//         '1:1' => [
-//           'title' => 'Box Slider Image 1:1',
-//           'value' => 1 / 1
-//         ]
-//       ],
-//       'selectedRatio' => '1:1',
-//     ],
-//   ],
+// 2) example: crop function for e.g. CE "MY_HEADER_CE"
+// -------------------------------------------------------------------------------------------------------------
+// $GLOBALS['TCA']['tt_content']['types']['MY_HEADER_CE']['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = [
+// 'desktop' => [
+//   'title' => '11:3',
+//   'allowedAspectRatios' => [
+//     'NaN' => [
+//         'title' => 'Desktop',
+//         'value' => 0.0
+//     ]
+//   ]
+// ],        
+// 'landscape' => [
+//   'title' => '256:125',
+//   'allowedAspectRatios' => [
+//     '256:125' => [
+//       'title' => 'Tablet Landscape',
+//       'value' => 256 / 125
+//     ]
+//   ]
+// ],
+// 'tablet' => [
+//   'title' => '192:125',
+//   'allowedAspectRatios' => [
+//     '192:125' => [
+//       'title' => 'Tablet Portrait',
+//       'value' => 192 / 125
+//     ]
+//   ]
+// ],
+// 'mobile' => [
+//   'title' => '6:5',
+//   'allowedAspectRatios' => [
+//     '6:5' => [
+//       'title' => 'Phone',
+//       'value' =>  6 / 5
+//       ]
+//     ]
+//   ]
 // ];
