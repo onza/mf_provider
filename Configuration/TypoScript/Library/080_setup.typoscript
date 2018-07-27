@@ -20,5 +20,5 @@ lib.year {
 # }
 
 # outsource typo3-core-form ext ------------------------------------------------------------------------------------------------------------
-# plugin.tx_form.settings.yamlConfigurations.100 = EXT:provider/Resources/Private/Forms/Yaml/FormSetup.yaml
-# module.tx_form.settings.yamlConfigurations.100 = EXT:provider/Resources/Private/Forms/Yaml/FormSetup.yaml
+# plugin.tx_form.settings.yamlConfigurations.100 = EXT:provider/Resources/Private/Forms/Contact.form.yaml
+# module.tx_form.settings.yamlConfigurations.100 = EXT:provider/Resources/Private/Forms/Contact.form.yaml

@@ -23,7 +23,7 @@ Just copy the `provider` folder inside `typo3conf/ext/` of your typo3 installati
 If you use ext:news with own templates and/or the form core extension you copy these extension templates into Resources/Private/News and/or .../Form.
 
 System environment:
-* typo3 8.7.*
+* TYPO3 8.7.*
 
 
 
