@@ -111,16 +111,6 @@ TCEFORM {
 
 # extension stuff ------------------------------------------------------------------------------------------------------------------------
 
-# ce-extension ----------------------------------------------------------------
-# if own ce-extension (for example via ext:mask_export) outsource templates to provider ext
-# plugin.tx_mfcontent {
-#   view {
-#     templateRootPath = EXT:provider/Resources/Private/Templates/Content/
-#     partialRootPath = EXT:provider/Resources/Private/Partials/Content/
-#     layoutRootPath = EXT:provider/Resources/Private/Layouts/Content/
-#   }
-# }
-
 # Ext:news -------------------------------------------------------------------
 # plugin.tx_news {
 #   view {
