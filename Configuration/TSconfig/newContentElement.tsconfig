@@ -1,10 +1,10 @@
-mod.wizards {
-  newContentElement {
-    wizardItems {
-      common {
-        header = Custom Content Elements
-      }
-      common.show = *
-    }
-  }
-}
+// mod.wizards {
+//   newContentElement {
+//     wizardItems {
+//       common {
+//         header = Custom Content Elements
+//       }
+//       common.show = *
+//     }
+//   }
+// }
