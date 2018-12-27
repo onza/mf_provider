@@ -1,0 +1,25 @@
+<f:layout name="Page" />
+
+<f:section name="Content">
+	<header>
+		<f:render partial="navbar" />
+		<f:if condition="{header}">
+			<f:then>
+				<div class="header-image">
+					<f:format.raw>{header}</f:format.raw>
+				</div>
+			</f:then>
+			<f:else>
+				<div class="header-image">
+					<img alt="Header Image" src="typo3conf/ext/mf_provider/Resources/Public/Images/schloss_karlsruhe.jpg" width="1500" height="600">
+				</div>
+			</f:else>
+		</f:if>
+	</header>
+	<div class="content">
+		<div class="content__wrapper">
+			<f:format.raw>{main}</f:format.raw>
+		</div>
+	</div>
+	<f:render partial="footer" />
+</f:section>

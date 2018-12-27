@@ -1,28 +1,24 @@
 # BE Layouts -------------------------------------------------------------------------------------------------
 mod.web_layout.BackendLayouts {
-  homepage {
-    title = Startseite
+	1 {
+    title = Inhalt und Sidebar (Subpages)
     #icon = EXT:mf_provider/Resources/Public/Icons/Be/
     config {
       backend_layout {
       	colCount = 12
-      	rowCount = 3
+      	rowCount = 1
       	rows {
           1 {
       			columns {
       				1 {
-      					name = Headerbild
-      					colPos = 1
-                colspan = 12
-      				}
-      			}
-      		}
-      		2 {
-      			columns {
-      				1 {
-      					name = Inhalte
+      					name = Inhalt
       					colPos = 2
-                colspan = 12
+                colspan = 8
+      				}
+							2 {
+      					name = Sidebar
+      					colPos = 3
+                colspan = 4
       				}
       			}
       		}
@@ -30,8 +26,8 @@ mod.web_layout.BackendLayouts {
       }
     }
   }
-  firstlevelpage {
-    title = Seite der 1. Ebene
+  2 {
+    title = Headerimage, Inhalt & Sidebar (1. Level)
     #icon = EXT:mf_provider/Resources/Public/Icons/Be/
     config {
       backend_layout {
@@ -65,28 +61,53 @@ mod.web_layout.BackendLayouts {
       }
     }
   }
-	subpage {
-    title = Unterseiten
+	3 {
+    title = Headerimage & Inhalt (e.g. Homepage)
     #icon = EXT:mf_provider/Resources/Public/Icons/Be/
+    config {
+      backend_layout {
+      	colCount = 12
+      	rowCount = 3
+      	rows {
+          1 {
+      			columns {
+      				1 {
+      					name = Headerbild
+      					colPos = 1
+                colspan = 12
+      				}
+      			}
+      		}
+      		2 {
+      			columns {
+      				1 {
+      					name = Inhalte
+      					colPos = 2
+                colspan = 12
+      				}
+      			}
+      		}
+      	}
+      }
+    }
+  }
+	aside {
+    title = Sidebar
+    #icon = EXT:provider/Resources/Public/Icons/Be/
     config {
       backend_layout {
       	colCount = 12
       	rowCount = 1
       	rows {
-          1 {
-      			columns {
-      				1 {
-      					name = Inhalt
-      					colPos = 2
-                colspan = 8
-      				}
-							2 {
-      					name = Sidebar
-      					colPos = 3
-                colspan = 4
-      				}
-      			}
-      		}
+					1 {
+						columns {
+							1 {
+								name = Sidebar
+								colPos = 2
+								colspan = 12
+							}
+						}
+					}
       	}
       }
     }

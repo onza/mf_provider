@@ -13,7 +13,6 @@ A plain TYPO3 template provider extension for a quick and clean start to a new T
 * disable default content elements via extension manager
 * `ext:gridelements` example
 * Google Analytics (anonymize_ip & opt-out)
-* enable `ext:realurl`
 * prepared for the integration of own `ext:form` and `ext:news` templates
 * ...
 
@@ -23,7 +22,7 @@ Just copy the `mf_provider` folder inside `typo3conf/ext/` of your typo3 install
 If you use ext:news with own templates and/or the form core extension you copy these extension templates into Resources/Private/News and/or .../Form.
 
 System environment:
-* TYPO3 >= 8.7.*
+* TYPO3 9.5.x (changes not tested with 8.7.*)
 
 
 

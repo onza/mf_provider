@@ -21,7 +21,7 @@ if (TYPO3_MODE === 'BE') {
   $iconRegistry->registerIcon(
     'default-icon',
     \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-    ['source' => 'EXT:mf_provider/ext_icon.svg']
+    ['source' => 'EXT:mf_provider/ext_icon.png']
   );
 
   $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['mf_provider_ckeditor'] = 'EXT:mf_provider/Configuration/CKEditor/ckeditor.yaml';

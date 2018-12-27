@@ -1,0 +1,19 @@
+<f:layout name="Page" />
+
+<f:section name="Content">
+	<header>
+		<f:render partial="navbar" />
+	</header>
+	<f:render partial="breadcrumb" />
+	<div class="content">
+		<div class="content__wrapper">
+			<main>
+				<f:format.raw>{main}</f:format.raw>
+			</main>
+			<aside>
+				<f:format.raw>{aside}</f:format.raw>
+			</aside>
+		</div>
+	</div>
+	<f:render partial="footer" />
+</f:section>

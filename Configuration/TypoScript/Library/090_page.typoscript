@@ -2,6 +2,10 @@
 page = PAGE
 page {
 
+  typeNum = 0
+
+  # website head & general stuff ------------------------------------------------------------------------------------------------------------
+
   # body Tag
   bodyTag >
   bodyTagCObject = TEXT
@@ -56,13 +60,13 @@ page {
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"><script>window.jQuery || document.write('<script src="Js/jquery-3.3.1.min.js"><\/script>')</script>
   )
 
-  # Webfontloader (+ inline-JS) ---------------------------
+  # Webfontloader (+ inline-JS) --------------------------
   # 1100 = TEXT
   # 1100.value (
   #   <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
   # )
 
-  # JS: footer/file -------------------------------------
+  # JS: footer/file --------------------------------------
   includeJSFooter {
     # mobile navi
     file10 = EXT:mf_provider/Resources/Public/Js/offcanvasnavi.js
@@ -102,20 +106,27 @@ page {
 
 
 
-  # page template ---------------------------------------------------------------------------------------------------------------
-  typeNum = 0
-
-  bodyTag >
-  bodyTagCObject = TEXT
-  bodyTagCObject.dataWrap = <body id="uid{field:uid}">
-  # if static: bodyTag = <body id="top">
-  
+  # page template --------------------------------------------------------------------------------------------------------------- 
   10 = FLUIDTEMPLATE
   10 {
     layoutRootPath = EXT:mf_provider/Resources/Private/Pages/Layouts/
     partialRootPath = EXT:mf_provider/Resources/Private/Pages/Partials/
     
-    file = EXT:mf_provider/Resources/Private/Pages/Templates/Default.html
+    # connect fe- and be layouts -------------------
+    file.stdWrap.cObject = CASE
+    file.stdWrap.cObject {
+      key.data = pagelayout
+      
+      # templates
+      default = TEXT
+      default.value = EXT:mf_provider/Resources/Private/Pages/Templates/MainAside.html
+      pagets__1 < .default
+      pagets__2 = TEXT
+      pagets__2.value = EXT:mf_provider/Resources/Private/Pages/Templates/HeaderMainAside.html
+      pagets__3 = TEXT
+      pagets__3.value = EXT:mf_provider/Resources/Private/Pages/Templates/HeaderMain.html
+
+    }
 
     # template variables -------------------
     variables {
@@ -132,23 +143,13 @@ page {
       aside < .content0
       aside.select.where = colPos = 3
 
-      # connect fe-layouts and be-layouts -------------------
-      backendlayout = TEXT
-      backendlayout.data = pagelayout
-      backendlayout = CASE
-      backendlayout {
-        key.data = pagelayout
-
-        # templates
-        pagets__homepage = TEXT
-        pagets__homepage.value = homepage
-        pagets__firstlevelpage = TEXT
-        pagets__firstlevelpage.value = firstlevelpage
-        pagets__subpage = TEXT
-        pagets__subpage.value = subpage
-        # default < .pagets__subpage
-      }
+      # permacontent
+      # permaaside < .content0
+      # permaaside.table = tt_content
+      # permaaside.select.pidInList = XY
+      # permaaside.select.orderBy = sorting
+			# permaaside.select.where = colPos = 2
     }
-  }
 
+  }
 }
