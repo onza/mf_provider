@@ -5,8 +5,8 @@ page {
   # body Tag
   bodyTag >
   bodyTagCObject = TEXT
-  bodyTagCObject.field = uid
-  bodyTagCObject.wrap = <body id="uid|">
+  bodyTagCObject.dataWrap = <body id="page{field:uid}">
+  # or if static: bodyTag = <body id="top">
 
   # META ---------------------------------------------------------------------------------------------------------------
   meta {
@@ -17,26 +17,29 @@ page {
 
     description.field = description
     description.ifEmpty (
-      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+      
     )
-    robots = index,follow
+    keywords.field = keywords
+    abstract.field = abstract
+    author.field = author
+    author_email.field = author_email
+    seo_title.field = seo_title
   }
 
   # favicon
-  # shortcutIcon = EXT:mf_provider/Resources/Public/Icons/favicon.png
   headerData.10 = TEXT
-  headerData.10.value = <link rel="icon" type="image/png" sizes="32x32" href="/typo3conf/ext/provider/Resources/Public/Icons/favicon-32x32.png" />
+  headerData.10.value = <link rel="icon" type="image/png" sizes="32x32" href="/typo3conf/ext/mf_provider/Resources/Public/Icons/favicon-32x32.png" />
   headerData.20 = TEXT
-  headerData.20.value = <link rel="icon" type="image/png" sizes="16x16" href="/typo3conf/ext/provider/Resources/Public/Icons/favicon-16x16.png" />
+  headerData.20.value = <link rel="icon" type="image/png" sizes="16x16" href="/typo3conf/ext/mf_provider/Resources/Public/Icons/favicon-16x16.png" />
 
-  # cannonical tag
+  # cannonical tag (only typo3 < v9  https://docs.typo3.org/typo3cms/extensions/core/Changelog/9.5/Feature-20051-SupportTheCanonicalTag.html)
   # headerData.30 = TEXT
-  # headerData.30.value = <link rel="canonical" href="http://www.XXXXXXXXXX.de|"  />
+  # headerData.30.value = <link rel="canonical" href="http://www.XXXXXXXXXX.yz|"  />
 
   # CSS ----------------------------------------------------------------------------------------------------------------
   includeCSS {
-    file10 = EXT:provider/Resources/Public/Css/reset.css
-    file20 = EXT:provider/Resources/Public/Css/demo.css
+    file10 = EXT:mf_provider/Resources/Public/Css/reset.css
+    file20 = EXT:mf_provider/Resources/Public/Css/demo.css
     #file20.disableCompression = 1
     #file20.excludeFromConcatenation = 1
   }
@@ -44,7 +47,7 @@ page {
   # JAVASCRIPT ---------------------------------------------------------------------------------------------------------
   # JS: Head/file
   # includeJS {
-  #   file10 = EXT:provider/Resources/Public/Js/modernizr-custom.js
+  #   file10 = EXT:mf_provider/Resources/Public/Js/modernizr-custom.js
   # }
 
   # jQuery inkl. fallback --------------------------------
@@ -62,7 +65,7 @@ page {
   # JS: footer/file -------------------------------------
   includeJSFooter {
     # mobile navi
-    file10 = EXT:provider/Resources/Public/Js/offcanvasnavi.js
+    file10 = EXT:mf_provider/Resources/Public/Js/offcanvasnavi.js
   }
 
   # JS: footer/inline ------------------------------------
@@ -109,10 +112,10 @@ page {
   
   10 = FLUIDTEMPLATE
   10 {
-    layoutRootPath = EXT:provider/Resources/Private/Pages/Layouts/
-    partialRootPath = EXT:provider/Resources/Private/Pages/Partials/
+    layoutRootPath = EXT:mf_provider/Resources/Private/Pages/Layouts/
+    partialRootPath = EXT:mf_provider/Resources/Private/Pages/Partials/
     
-    file = EXT:provider/Resources/Private/Pages/Templates/Default.html
+    file = EXT:mf_provider/Resources/Private/Pages/Templates/Default.html
 
     # template variables -------------------
     variables {

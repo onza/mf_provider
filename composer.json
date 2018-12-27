@@ -1,5 +1,5 @@
 {
-  "name": "MFProvider/Provider",
+  "name": "MFProvider/mf_provider",
   "description": "TYPO3 Provider Extension",
   "type": "typo3-cms-extension",
   "require": {

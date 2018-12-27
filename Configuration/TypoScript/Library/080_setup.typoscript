@@ -8,17 +8,17 @@ lib.year {
 }
 
 # outsource fsc templates (you must also copy fsc templates into fsc folder)
-# lib.contentElement.layoutRootPaths.10 = typo3conf/ext/provider/Resources/Private/Fsc/Layouts/
-# lib.contentElement.partialRootPaths.10 = typo3conf/ext/provider/Resources/Private/Fsc/Partials/
-# lib.contentElement.templateRootPaths.10 = typo3conf/ext/provider/Resources/Private/Fsc/Templates/
+# lib.contentElement.layoutRootPaths.10 = typo3conf/ext/mf_provider/Resources/Private/Fsc/Layouts/
+# lib.contentElement.partialRootPaths.10 = typo3conf/ext/mf_provider/Resources/Private/Fsc/Partials/
+# lib.contentElement.templateRootPaths.10 = typo3conf/ext/mf_provider/Resources/Private/Fsc/Templates/
 
 # own icon set for fsc-ce "file-upload"
 # tt_content.uploads.20.renderObj.15.file {
-#   import = typo3conf/ext/provider/Resources/Public/Icons/fileicons/
+#   import = typo3conf/ext/mf_provider/Resources/Public/Icons/fileicons/
 #   width = 30
 #   ext = svg
 # }
 
 # outsource typo3-core-form ext ------------------------------------------------------------------------------------------------------------
-# plugin.tx_form.settings.yamlConfigurations.100 = EXT:provider/Resources/Private/Forms/Contact.form.yaml
-# module.tx_form.settings.yamlConfigurations.100 = EXT:provider/Resources/Private/Forms/Contact.form.yaml
+# plugin.tx_form.settings.yamlConfigurations.100 = EXT:mf_provider/Resources/Private/Forms/Contact.form.yaml
+# module.tx_form.settings.yamlConfigurations.100 = EXT:mf_provider/Resources/Private/Forms/Contact.form.yaml

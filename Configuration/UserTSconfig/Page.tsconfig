@@ -7,7 +7,7 @@ mod.SHARED {
 }
 
 # init custom ckeditor -------------------------
-RTE.default.preset = provider_ckeditor
+RTE.default.preset = mf_provider_ckeditor
 
 # TCEMAIN stuff ---------------------------------------------------------------
 TCEMAIN {
@@ -114,9 +114,9 @@ TCEFORM {
 # Ext:news -------------------------------------------------------------------
 # plugin.tx_news {
 #   view {
-#     templateRootPath = EXT:provider/Resources/Private/News/Templates
-#     partialRootPath = EXT:provider/Resources/Private/News/Partials
-#     layoutRootPath = EXT:provider/Resources/Private/News/Layouts
+#     templateRootPath = EXT:mf_provider/Resources/Private/News/Templates
+#     partialRootPath = EXT:mf_provider/Resources/Private/News/Partials
+#     layoutRootPath = EXT:mf_provider/Resources/Private/News/Layouts
 #   }
 # }
 # EXT:news list-template switsch if condition in news-list-template

@@ -1,25 +1,25 @@
 # extension stuff ------------------------------------------------------------------------------------------------------------------------
 
-# outsource ext:news template (you must also copy ext:news templates into ext:provider news folder) -------------------------------------------------------
+# outsource ext:news template (you must also copy ext:news templates into ext:mf_provider news folder) -------------------------------------------------------
 # plugin.tx_news {
 #   view {
 #     templateRootPaths >
 #     templateRootPaths {
 #       0 = EXT:news/Resources/Private/Templates/
-#       1 = EXT:provider/Resources/Private/News/Templates/
+#       1 = EXT:mf_provider/Resources/Private/News/Templates/
 #     }
 #     partialRootPaths >
 #     partialRootPaths {
 #       0 = EXT:news/Resources/Private/Partials/
-#       1 = EXT:provider/Resources/Private/News/Partials/
+#       1 = EXT:mf_provider/Resources/Private/News/Partials/
 #     }
 #     layoutRootPaths >
 #     layoutRootPaths {
 #       0 = EXT:news/Resources/Private/Layouts/
-#       1 = EXT:provider/Resources/Private/News/Layouts/
+#       1 = EXT:mf_provider/Resources/Private/News/Layouts/
 #     }
 #   }
-#   settings.cssFile = EXT:provider/Resources/News/Css
+#   settings.cssFile = EXT:mf_provider/Resources/News/Css
 # }
 
 # ext:min (more or less just for google insights, does not make performance better) ----------------------------------------------------

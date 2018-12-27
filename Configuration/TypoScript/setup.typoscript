@@ -1,5 +1,5 @@
 <INCLUDE_TYPOSCRIPT: source="DIR: ./Library" extensions="typoscript">
 
 # other methods:
-# <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/XXXXXX">
-# <INCLUDE_TYPOSCRIPT: source="DIR:EXT:provider/Configuration/TypoScript/XXXXXXX">
+# <INCLUDE_TYPOSCRIPT: source="FILE:EXT:mf_provider/Configuration/TypoScript/XXXXXX.xyz">
+# <INCLUDE_TYPOSCRIPT: source="DIR:EXT:mf_provider/Configuration/TypoScript/XXXXXXX">

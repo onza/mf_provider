@@ -19,11 +19,11 @@ A plain TYPO3 template provider extension for a quick and clean start to a new T
 
 ## How to use
 
-Just copy the `provider` folder inside `typo3conf/ext/` of your typo3 installation and start the integration of your templates.
+Just copy the `mf_provider` folder inside `typo3conf/ext/` of your typo3 installation and start the integration of your templates.
 If you use ext:news with own templates and/or the form core extension you copy these extension templates into Resources/Private/News and/or .../Form.
 
 System environment:
-* TYPO3 8.7.*
+* TYPO3 >= 8.7.*
 
 
 

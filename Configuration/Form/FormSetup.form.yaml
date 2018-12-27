@@ -5,7 +5,7 @@ TYPO3:
         allowSaveToExtensionPaths: true
         allowDeleteFromExtensionPaths: false
         allowedExtensionPaths:
-          10: EXT:provider/Resources/Private/Forms/
+          10: EXT:mf_provider/Resources/Private/Forms/
 
       prototypes:
         standard:
@@ -13,8 +13,8 @@ TYPO3:
             Form:
               renderingOptions:
                 templateRootPaths:
-                  200: 'EXT:provider/Resources/Private/Forms/Templates/'
+                  200: 'EXT:mf_provider/Resources/Private/Forms/Templates/'
                 partialRootPaths:
-                  200: 'EXT:provider/Resources/Private/Forms/Partials/'
+                  200: 'EXT:mf_provider/Resources/Private/Forms/Partials/'
                 layoutRootPaths:
-                  200: 'EXT:provider/Resources/Private/Forms/Layouts/'
+                  200: 'EXT:mf_provider/Resources/Private/Forms/Layouts/'

@@ -1,8 +1,8 @@
 # ce-provider (ce templates from Ext:mask_export) ----------------------------
 # plugin.tx_my_content-provider_ext {
 #   view {
-#     templateRootPath = EXT:provider/Resources/Private/Content/templates
-#     #partialRootPath = EXT:provider/Resources/Private/Content/templates/Partials
-#     #layoutRootPath = EXT:provider/Resources/Private/Content/templates/Layouts
+#     templateRootPath = EXT:mf_provider/Resources/Private/Content/templates
+#     #partialRootPath = EXT:mf_provider/Resources/Private/Content/templates/Partials
+#     #layoutRootPath = EXT:mf_provider/Resources/Private/Content/templates/Layouts
 #   }
 # }

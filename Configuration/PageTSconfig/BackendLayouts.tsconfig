@@ -2,7 +2,7 @@
 mod.web_layout.BackendLayouts {
   homepage {
     title = Startseite
-    #icon = EXT:provider/Resources/Public/Icons/Be/
+    #icon = EXT:mf_provider/Resources/Public/Icons/Be/
     config {
       backend_layout {
       	colCount = 12
@@ -32,7 +32,7 @@ mod.web_layout.BackendLayouts {
   }
   firstlevelpage {
     title = Seite der 1. Ebene
-    #icon = EXT:provider/Resources/Public/Icons/Be/
+    #icon = EXT:mf_provider/Resources/Public/Icons/Be/
     config {
       backend_layout {
       	colCount = 12
@@ -67,7 +67,7 @@ mod.web_layout.BackendLayouts {
   }
 	subpage {
     title = Unterseiten
-    #icon = EXT:provider/Resources/Public/Icons/Be/
+    #icon = EXT:mf_provider/Resources/Public/Icons/Be/
     config {
       backend_layout {
       	colCount = 12
@@ -93,7 +93,7 @@ mod.web_layout.BackendLayouts {
   }
 	leer {
     title = leer
-    #icon = EXT:provider/Resources/Public/Icons/Be/
+    #icon = EXT:mf_provider/Resources/Public/Icons/Be/
     config {
       backend_layout {
       	colCount = 0

@@ -2,7 +2,7 @@
 lib.mainNavi = HMENU
 lib.mainNavi {
   special = list
-  special.value = 9,2,3,4,5
+  special.value = 2,3,4,5,6
   1 = TMENU
   1 {
     wrap = |

@@ -7,11 +7,11 @@ if (!defined('TYPO3_MODE')) {
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 ExtensionManagementUtility::addPageTSConfig(
-  '<INCLUDE_TYPOSCRIPT: source="DIR:EXT:provider/Configuration/TSconfig">'
+  '<INCLUDE_TYPOSCRIPT: source="DIR:EXT:mf_provider/Configuration/PageTSconfig">'
 );
 
 ExtensionManagementUtility::addUserTSConfig(
-  '<INCLUDE_TYPOSCRIPT: source="DIR:EXT:provider/Configuration/UserTSConfig">'
+  '<INCLUDE_TYPOSCRIPT: source="DIR:EXT:mf_provider/Configuration/UserTSConfig">'
 );
 
 if (TYPO3_MODE === 'BE') {
@@ -21,10 +21,10 @@ if (TYPO3_MODE === 'BE') {
   $iconRegistry->registerIcon(
     'default-icon',
     \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-    ['source' => 'EXT:provider/ext_icon.svg']
+    ['source' => 'EXT:mf_provider/ext_icon.svg']
   );
 
-  $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['provider_ckeditor'] = 'EXT:provider/Configuration/CKEditor/ckeditor.yaml';
+  $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['mf_provider_ckeditor'] = 'EXT:mf_provider/Configuration/CKEditor/ckeditor.yaml';
 
   /***************
    * Extension Manager Settings
