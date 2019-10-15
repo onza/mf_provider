@@ -1,3 +1,5 @@
+outdated - will not be updated
+
 # Provider Extension for TYPO3 CMS
 
 A plain TYPO3 template provider extension for a quick and clean start to a new TYPO3 project.
